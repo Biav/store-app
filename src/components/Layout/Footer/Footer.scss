@@ -1,0 +1,51 @@
+@import '../variables.scss';
+
+.footer-area {
+    background: #0d0d1f;
+
+    .icons {
+        height: 24px;
+        width: 24px;
+        background-size: contain;
+        background-repeat: no-repeat ;
+        background-color: $white;
+
+        &.facebook {
+         background-image: url(./../../../assets/icons/facebook.svg);
+        }
+
+        &.instagram {
+            background-image: url(./../../../assets/icons/instagram.svg);
+        }
+    }
+
+    .footer-bottom {
+        color: $white;
+        padding: 20px 0;
+
+        @media(max-width: 991px) {
+            margin-top: 20px;
+        }
+        p {
+            color: $white;
+        }
+        a,
+        span {
+            color: $primary-color;
+        }
+        .footer-social {
+            text-align: center;
+            @media(max-width: 991px) {
+                text-align:left;
+                margin-top: 30px;
+            }
+            a {
+                display: inline-grid;
+                text-align: center;
+                margin-left: 5px;
+                border-radius: 5px;
+                align-content: center;
+            }
+        }
+    }
+}
