@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ImageProduct from './../../../assets/products/product1.jpg'
 import './Product.scss';
 
 class Product extends Component {
@@ -11,16 +10,16 @@ class Product extends Component {
 						<div className="product-img">
 							<img className="img-fluid w-100" src = { require(`./../../../assets/products/${this.props.imageProduct}`)} alt="" />
 							<div className="p_icon">
-								<a href = { this.props.linkProduct }>
+								<a href = "/product-details">
 									<div className="open-product"> </div>
 								</a>
-								<a href = { this.props.linkProduct }>
+								<a href = "/product-details">
 									<div className="shop-product"> </div>
 								</a>
 							</div>
 						</div>
 						<div className="product-btm">
-							<a href = { this.props.linkProduct } className="d-block">
+							<a href = "/product-details" className="d-block">
 								<h4> { this.props.name } </h4>
 							</a>
 							<div className="mt-3">

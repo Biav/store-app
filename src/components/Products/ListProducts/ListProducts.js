@@ -26,6 +26,27 @@ class ListProducts extends Component {
 				salePrice: 30,
 				imageProduct: 'product3.jpg',
 				linkProduct: '/#product'
+			},
+			{
+				name: "Red women purses",
+				listPrice: 20,
+				salePrice: 10,
+				imageProduct: 'product2.jpg',
+				linkProduct: '/#product'
+			},
+			{
+				name: "adidas sport shoe",
+				listPrice: 80,
+				salePrice: 60,
+				imageProduct: 'product1.jpg',
+				linkProduct: '/#product'
+			},
+			{
+				name: "Latest men’s sneaker",
+				listPrice: 40,
+				salePrice: 30,
+				imageProduct: 'product3.jpg',
+				linkProduct: '/#product'
 			}
 		];
 
