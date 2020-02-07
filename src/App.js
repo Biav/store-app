@@ -1,17 +1,13 @@
 import React from 'react';
-import Menu from './components/Layout/Menu/Menu';
-import Banner from './components/Layout/Banner/Banner';
-import ListProducts from './components/Products/ListProducts/ListProducts';
-import Footer from './components/Layout/Footer/Footer';
-import './App.css';
+import { Route } from 'react-router-dom';
+import ProductDetails from './components/Products/ProductDetails/ProductDetails';
+import Home from './components/Layout/Home/Home';
 
 function App() {
   return (
     <div>
-      <Menu/>
-      <Banner/>
-      <ListProducts/>
-      <Footer/>
+      <Route path='/product-details' component={ ProductDetails }/>
+      <Route path='/' exact component = { Home }/>
     </div>
   );
 }

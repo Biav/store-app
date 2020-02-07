@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import '../style.scss';
 
 .active {
     color: $primary-color;
@@ -23,18 +23,6 @@
         .right_nav {
             .nav-item {
                 margin: 0 !important;
-            }
-        }
-        .icons {
-            font-size: 16px;
-            line-height: 80px;
-            display: inline-block;
-            color: #4a4a4a;
-            margin-left: 20px;
-            text-align: center;
-            @include transition;
-            &:hover {
-                color: $primary-color;
             }
         }
         .nav {
