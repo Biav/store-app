@@ -2,11 +2,13 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import Home from './components/Layout/Home/Home';
 import ProductDetails from './components/Products/ProductDetails/ProductDetails';
+import Cart from './components/Cart/Cart';
 
 function App() {
   return (
     <div>
-      <Route path='/product-details' component={ ProductDetails }/>
+      <Route path='/cart' component = { Cart } />
+      <Route path='/product-details' component = { ProductDetails }/>
       <Route path='/' exact component = { Home }/>
     </div>
   );
