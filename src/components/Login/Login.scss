@@ -77,7 +77,7 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
     color: $title-color;
 }
   
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+input:active  {
     -moz-transform: scale(0.95);
     -webkit-transform: scale(0.95);
     -o-transform: scale(0.95);
@@ -85,7 +85,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
     transform: scale(0.95);
 }
 
-input[type=text] {
+input {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
@@ -106,7 +106,7 @@ input[type=text] {
     border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, input[type=number]:focus, input[type=password]:focus, input[type=email]:focus {
     background-color: #fff;
     border-bottom: 2px solid $primary-color;
 }
