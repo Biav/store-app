@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
 import * as loginActions from './../../store/actions';
+import * as actionTypes from './../../store/actions/actionTypes';
 import { connect } from 'react-redux';
 import './Login.scss'
 
@@ -10,11 +11,11 @@ class Login extends Component {
 
         const responseFacebook = (response) => {
             console.log(response);
-            this.props.loginUser(response);
+            this.props.loginGoogle(response, actionTypes.AUTH_FACEBOOK);
         }
     
         const responseGoogle = (response) => {
-            this.props.loginUser(response);
+            this.props.loginGoogle(response, actionTypes.AUTH_GOOGLE);
             console.log(response);
         }
         
@@ -65,7 +66,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        loginUser: profile => dispatch(loginActions.authUserStart(profile))
+        loginGoogle: (profile, loginMethod) => dispatch(loginActions.authUserLogin(profile, loginMethod)),
     }
 }
 

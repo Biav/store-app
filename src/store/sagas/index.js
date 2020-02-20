@@ -6,6 +6,5 @@ import {
 } from './auth';
 
 export function* watchAuth(){
-    debugger
     yield takeEvery(actionsType.AUTH_USER_START, authUserSaga);
 }
