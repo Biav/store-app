@@ -12,9 +12,6 @@ const reducer = (state = initialState, action) => {
     switch(action.type) {
 
         case actionTypes.AUTH_USER: 
-
-           let profile = action.profile;
-
            return {
                ...state,
                token: action.token,

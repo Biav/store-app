@@ -9,13 +9,19 @@ class Login extends Component {
     render() {
 
         const responseFacebook = (response) => {
-            console.log(response);
             this.props.loginUser(response);
+            redirectToHomePage();
         }
     
         const responseGoogle = (response) => {
             this.props.loginUser(response);
-            console.log(response);
+            redirectToHomePage();
+        }
+
+        const redirectToHomePage = () => {
+            if(this.props.token) {
+                this.props.history.push("/");
+            }
         }
         
         return(
@@ -59,7 +65,8 @@ class Login extends Component {
 
 const mapStateToProps = state => {
     return {
-        email: state.loginUser.email
+        email: state.loginUser.email,
+        token: state.loginUser.token
     }
 }
 

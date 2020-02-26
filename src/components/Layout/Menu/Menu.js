@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MenuItem from './MenuItem';
 import './Menu.scss';
+import { connect } from 'react-redux';
 
 class Menu extends Component {
 
@@ -21,12 +22,22 @@ class Menu extends Component {
 			{
 				label: "Contato",
 				link: "/contato"
-			},
-			{
-				label: "Login",
-				link: "/login"
 			}
 		];
+
+		debugger
+
+		if(this.props.token) {
+			menuOptions.push({
+				label: this.props.name,
+				link: '#'
+			})
+		} else {
+			menuOptions.push({
+				label: "Login",
+				link: "/login"
+			})
+		}
 
 		const menu = Object.keys(menuOptions).map((index) => {
 			return (
@@ -67,4 +78,11 @@ class Menu extends Component {
 	}
 }
 
-export default Menu;
+const mapStateToProps = state => {
+	return {
+		name: state.loginUser.name,
+		token: state.loginUser.token
+	}
+}
+
+export default connect(mapStateToProps, null)(Menu);
