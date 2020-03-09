@@ -8,34 +8,35 @@ class Menu extends Component {
 	render() {
 		let menuOptions = [
 			{
-				label: "Home", 
-				link: "/"
+				label: 'Home', 
+				link: '/'
 			},
 			{
-				label: "Homens",
-				link: "/homens"
+				label: 'Homens',
+				link: '/homens'
 			},
 			{
-				label: "Mulheres",
-				link: "/mulheres"
+				label: 'Mulheres',
+				link: '/mulheres'
 			},
 			{
-				label: "Contato",
-				link: "/contato"
+				label: 'Contato',
+				link: '/contato'
 			}
 		];
-
-		debugger
 
 		if(this.props.token) {
 			menuOptions.push({
 				label: this.props.name,
 				link: '#'
+			},{
+				label: 'Sair',
+				link: '/logout'
 			})
 		} else {
 			menuOptions.push({
-				label: "Login",
-				link: "/login"
+				label: 'Login',
+				link: '/login'
 			})
 		}
 

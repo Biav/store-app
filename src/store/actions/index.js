@@ -1,4 +1,6 @@
 export {
     authUser,
-    authUserStart
+    authUserLogin,
+    authUserLogout,
+    checkLogin
 } from './auth';
