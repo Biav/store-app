@@ -1,32 +1,44 @@
 import React, { Component } from 'react';
 import MenuItem from './MenuItem';
 import './Menu.scss';
+import { connect } from 'react-redux';
 
 class Menu extends Component {
 
 	render() {
 		let menuOptions = [
 			{
-				label: "Home", 
-				link: "/"
+				label: 'Home', 
+				link: '/'
 			},
 			{
-				label: "Homens",
-				link: "/homens"
+				label: 'Homens',
+				link: '/homens'
 			},
 			{
-				label: "Mulheres",
-				link: "/mulheres"
+				label: 'Mulheres',
+				link: '/mulheres'
 			},
 			{
-				label: "Contato",
-				link: "/contato"
-			},
-			{
-				label: "Login",
-				link: "/login"
+				label: 'Contato',
+				link: '/contato'
 			}
 		];
+
+		if(this.props.token) {
+			menuOptions.push({
+				label: this.props.name,
+				link: '#'
+			},{
+				label: 'Sair',
+				link: '/logout'
+			})
+		} else {
+			menuOptions.push({
+				label: 'Login',
+				link: '/login'
+			})
+		}
 
 		const menu = Object.keys(menuOptions).map((index) => {
 			return (
@@ -67,4 +79,11 @@ class Menu extends Component {
 	}
 }
 
-export default Menu;
+const mapStateToProps = state => {
+	return {
+		name: state.loginUser.name,
+		token: state.loginUser.token
+	}
+}
+
+export default connect(mapStateToProps, null)(Menu);
