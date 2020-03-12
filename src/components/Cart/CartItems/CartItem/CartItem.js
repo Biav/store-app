@@ -6,38 +6,38 @@ class CartItem extends Component {
 	render() {
 		return(
 			<>
-				<div class="cart-item">
-					<div class="col-md-6">
-						<div class="media">
-							<div class="d-flex">
+				<div className="cart-item">
+					<div className="col-md-6">
+						<div className="media">
+							<div className="d-flex">
 								<img
 										src={Product1}
 										alt=""
 								/>
 							</div>
-							<div class="media-body">
+							<div className="media-body">
 								<p>Minimalistic shop for multipurpose use</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-2">
-							<div class="price">$360.00</div>
+					<div className="col-md-2">
+							<div className="price">$360.00</div>
 					</div>
-					<div class="col-md-2">
-						<div class="product_count">
+					<div className="col-md-2">
+						<div className="product_count">
 							<input
 									type="number"
 									name="qty"
 									id="sst"
-									maxlength="12"
+									maxLength="12"
 									value="1"
 									title="Quantity:"
-									class="input-text qty"
+									className="input-text qty"
 							/>
 						</div>
 					</div>
-					<div class="col-md-2">
-						<div class="price">$720.00</div>
+					<div className="col-md-2">
+						<div className="price">$720.00</div>
 					</div>
 				</div>
 			</>
