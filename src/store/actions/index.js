@@ -4,3 +4,7 @@ export {
     authUserLogout,
     checkLogin
 } from './auth';
+export {
+    addProduct,
+    startAddProduct
+} from './product'

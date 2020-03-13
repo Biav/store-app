@@ -1,5 +1,7 @@
 import React, { Component} from 'react';
 import SimpleReactValidator from 'simple-react-validator';
+import { connect } from 'react-redux';
+import * as productActions from './../../../../store/actions'
 
 class ProductForm extends Component {
 
@@ -23,11 +25,13 @@ class ProductForm extends Component {
 		})
 	}
 
-	addProduct(event) {
+	submitProduct(event) {
 		event.preventDefault();
 
 		if (this.validator.allValid()) {
 			console.log("test")
+			debugger
+			this.props.addProduct(this.state);
 		} else {
 			this.validator.showMessages();
 		}
@@ -109,7 +113,7 @@ class ProductForm extends Component {
 							<div className="col-sm-offset-2 col-sm-10">
 								<button type="submit" 
 										className="btn btn-primary" 
-										onClick={(e) => this.addProduct(e)}>
+										onClick={(e) => this.submitProduct(e)}>
 									Salvar
 								</button>
 							</div>
@@ -121,4 +125,10 @@ class ProductForm extends Component {
 	}
 }
 
-export default ProductForm;
+const mapDispatchToProps = dispatch => {
+	return {
+		addProduct: (product) => dispatch(productActions.startAddProduct(product))
+	}
+}
+
+export default connect(null, mapDispatchToProps)(ProductForm);
