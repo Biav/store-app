@@ -42,7 +42,7 @@ class Menu extends Component {
 
 		const menu = Object.keys(menuOptions).map((index) => {
 			return (
-				<MenuItem label={menuOptions[index].label} link={menuOptions[index].link} />
+				<MenuItem label={menuOptions[index].label} link={menuOptions[index].link} key={index} />
 			)
 		});
 

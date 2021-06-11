@@ -10,11 +10,11 @@ class CartItems extends Component {
 	render() {
 		return(
 			<>
-				<section class="cart_area">
-					<div class="container">
-						<div class="cart_inner">
-							<div class="table-responsive">
-								<div class="cart-items">
+				<section className="cart_area">
+					<div className="container">
+						<div className="cart_inner">
+							<div className="table-responsive">
+								<div className="cart-items">
 									<CartTitle />
 									<CartItem />
 									<CartItem />

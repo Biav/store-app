@@ -4,11 +4,11 @@ class Checkout extends Component {
     render() {
         return(
             <>
-                <div class="out_button_area">
+                <div className="out_button_area">
                     <div>
-                        <div class="checkout_btn_inner">
-                            <a class="gray_btn" href="#">Continue Shopping</a>
-                            <a class="main_btn" href="#">Proceed to checkout</a>
+                        <div className="checkout_btn_inner">
+                            <a className="gray_btn" href="/home">Continue Shopping</a>
+                            <a className="main_btn" href="/checkout">Proceed to checkout</a>
                         </div>
                     </div>
                 </div>
